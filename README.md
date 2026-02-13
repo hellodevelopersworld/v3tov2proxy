@@ -2,6 +2,10 @@
 
 Radikoolのために、NHKのv3 APIで返されるJSONをV2形式に変換するプロキシアプリ(以下proxy)。
 
+## ダウンロード
+最新版の実行ファイル（exe）は、[こちらのリリースページ](https://github.com/hellodevelopersworld/v3tov2proxy/releases/latest)からダウンロードできる。
+
+
 # 動作
 
 proxyはWebサーバとして動作し、Radikoolのnhk.xmlに書いてあるNHK用の番組表取得URLをこれに向けることで、代わりにV3 APIで番組表を取得し、Radikoolが理解できるようにJSONを変換して返す。
@@ -31,8 +35,12 @@ _ENTER_YOUR_KEY_部分は自分のkeyに置き換えること。
 Python実行環境があれば
 'python v3tov2proxy.py'で起動する。またはバイナリも作成してあるので、
 v3tov2proxy.exeを起動する。defaultではポート番号8080で待ち受ける。--portオプションで変更することも可能。基本的に常時起動しておく。
+初めての実行時にWindowsのファイアウォール、ウイルス対策ソフトで警告されると思うので、動作を許可すること。
 
 # 開発環境
 
 Anaconda + Python 3.13.11
+
+バイナリの作成方法は
+'pyinstaller --onefile v3tov2proxy.py'
 

@@ -1,6 +1,7 @@
 __pycache__/
 dist/
 build/
+v3tov2proxy.spec
 *.exe
 .env
 .vscode/

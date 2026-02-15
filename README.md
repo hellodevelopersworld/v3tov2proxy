@@ -51,7 +51,9 @@ v3tov2proxy.vbsとv3tov2proxy.exeがRadikool.exeと同じパスに置いてあ�
 ![タスク3](./images/task3.png)
 
 タスクの操作は以下のように、「プログラム/スクリプト」はwscript.exeにして、「引数の追加」にv3tov2proxy.vbsをフルパスで記述する。v3tov2proxy.vbsの中にv3tov2proxy.exeのフルパスが書いてあるので、例と異なればそれも修正すること。
+
 ![タスク4](./images/task4.png)
+
 起動しているかどうかはタスクマネージャーで確認する。
 
 

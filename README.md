@@ -9,6 +9,7 @@ Radikoolのために、NHKのv3 APIで返されるJSONをV2形式に変換する
 # 動作
 
 proxyはWebサーバとして動作し、Radikoolのnhk.xmlに書いてあるNHK用の番組表取得URLをこれに向けることで、代わりにV3 APIで番組表を取得し、Radikoolが理解できるようにJSONを変換して返す。
+![動作](./images/proxy.png)
 
 # 使い方
 
@@ -16,7 +17,7 @@ Radikoolを動作させているPCでproxyを起動するか、常時起動し�
 
 ## Radikool側の変更
 
-files/nhk.xml内のTimeTableタグに記述してあるURLをプロキシのアドレスにする。
+files/nhk.xml内のTimeTableタグに記述してあるURLをproxyのアドレスにする。
 ```xml:nhk.xml
   <RadioStation>
     <Id>R1_tokyo</Id>
@@ -28,7 +29,7 @@ files/nhk.xml内のTimeTableタグに記述してあるURLをプロキシのア�
 
 プロトコルはHTTPにする。Radikoolと同じPCでproxyを動作させるなら、ホスト名はlocalhostにする。APIのパスに/v3は不要(proxy内に書いてあるため)。
 _ENTER_YOUR_KEY_部分は自分のkeyに置き換えること。
-他のRadioStationについても同じように変更する。
+他のRadioStationについても同じように変更する。service、areaは局、地域に合わせて変更すること。
 
 ## proxy側
 
